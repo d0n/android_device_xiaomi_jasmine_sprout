@@ -49,11 +49,15 @@ BOARD_VENDOR_PLATFORM := xiaomi-sdm660
 BOARD_ROOT_EXTRA_FOLDERS := persist
 
 # Vendor Security patch level
+<<<<<<< HEAD
 VENDOR_SECURITY_PATCH := 2019-01-01
 
 # Vendor init
 TARGET_INIT_VENDOR_LIB := libinit_jasmine
 TARGET_RECOVERY_DEVICE_MODULES := libinit_jasmine
+=======
+VENDOR_SECURITY_PATCH := 2018-12-01
+>>>>>>> b949735... jasmine : squashed changes
 
 # WLAN MAC
 WLAN_MAC_SYMLINK := true
