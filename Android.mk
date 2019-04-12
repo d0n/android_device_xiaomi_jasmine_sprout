@@ -24,6 +24,8 @@
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),jasmine_sprout)
+#$(shell mkdir -p $(OUT_DIR)/obj/busybox/full)
+#$(shell cp external/busybox/busybox-full.config $(OUT_DIR)/obj/EXECUTABLES/busybox_intermediates)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
