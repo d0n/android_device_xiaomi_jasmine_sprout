@@ -112,7 +112,7 @@ TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
 #TW_RECOVERY_ADDITIONAL_RELINK_FILES := ${OUT}/system/lib64/android.hardware.boot@1.0.so
 
 # Root Folders
-BOARD_ROOT_EXTRA_FOLDERS := persist bt_firmware dsp firmware persist
+BOARD_ROOT_EXTRA_FOLDERS := persist bt_firmware dsp firmware
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-01-01
