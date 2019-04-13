@@ -71,22 +71,24 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 # Partitions
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x04000000
 BOARD_FLASH_BLOCK_SIZE := 131072
-
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_HAS_REMOVABLE_STORAGE := true
-
 BOARD_SUPPRESS_SECURE_ERASE := true
-
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Recovery
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/etc/recovery.wipe
-
-BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_HAS_NO_SELECT_BUTTON := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
+$(shell mkdir -p $(OUT_DIR)/obj/PACKAGING/target_files_intermediates/lineage_jasmine_sprout-target_files-eng.d0n/RECOVERY/RAMDISK/etc)
+$(shell cp -p $(DEVICE_PATH)/recovery/root/etc/recovery.fstab $(OUT_DIR)/obj/PACKAGING/target_files_intermediates/lineage_jasmine_sprout-target_files-eng.d0n/RECOVERY/RAMDISK/etc/)
+WITH_TWRP := true
+RECOVERY_VARIANT := twrp
+TW_USE_TOOLBOX := false
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor

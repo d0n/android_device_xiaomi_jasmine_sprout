@@ -50,6 +50,59 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc \
+    $(DEVICE_PATH)/recovery/root/init.recovery.usb.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.usb.rc \
+    $(DEVICE_PATH)/recovery/root/ueventd.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/ueventd.qcom.rc \
+    $(DEVICE_PATH)/recovery/root/etc/recovery.fstab:$(TARGET_COPY_OUT_RECOVERY)/root/etc/recovery.fstab \
+    $(DEVICE_PATH)/recovery/root/etc/recovery.wipe:$(TARGET_COPY_OUT_RECOVERY)/root/etc/recovery.wipe \
+    $(DEVICE_PATH)/recovery/root/etc/twrp.fstab:$(TARGET_COPY_OUT_RECOVERY)/root/etc/twrp.fstab \
+    $(DEVICE_PATH)/recovery/root/sbin/android.hardware.boot@1.0-service:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.boot@1.0-service \
+    $(DEVICE_PATH)/recovery/root/sbin/android.hardware.boot@1.0.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.boot@1.0.so \
+    $(DEVICE_PATH)/recovery/root/sbin/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.gatekeeper@1.0-service-qti \
+    $(DEVICE_PATH)/recovery/root/sbin/android.hardware.gatekeeper@1.0.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.gatekeeper@1.0.so \
+    $(DEVICE_PATH)/recovery/root/sbin/android.hardware.keymaster@3.0-service-qti:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.keymaster@3.0-service-qti \
+    $(DEVICE_PATH)/recovery/root/sbin/android.hardware.keymaster@3.0.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.keymaster@3.0.so \
+    $(DEVICE_PATH)/recovery/root/sbin/android.hardware.weaver@1.0.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.weaver@1.0.so \
+    $(DEVICE_PATH)/recovery/root/sbin/android.hidl.base@1.0.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hidl.base@1.0.so \
+    $(DEVICE_PATH)/recovery/root/sbin/android.hidl.token@1.0.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hidl.token@1.0.so \
+    $(DEVICE_PATH)/recovery/root/sbin/android.system.wifi.keystore@1.0.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.system.wifi.keystore@1.0.so \
+    $(DEVICE_PATH)/recovery/root/sbin/prepdecrypt.sh:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/prepdecrypt.sh \
+    $(DEVICE_PATH)/recovery/root/sbin/qseecomd:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/qseecomd \
+    $(DEVICE_PATH)/recovery/root/sbin/update_engine_sideload:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/update_engine_sideload \
+    $(DEVICE_PATH)/recovery/root/sbin/vendor.qti.hardware.qteeconnector@1.0-service:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/vendor.qti.hardware.qteeconnector@1.0-service \
+    $(DEVICE_PATH)/recovery/root/sbin/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/vendor.qti.hardware.tui_comm@1.0-service-qti \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libGPreqcancel.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libGPreqcancel.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libGPreqcancel_svc.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libQSEEComAPI.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libSecureUILib.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libSecureUILib.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libStDrvInt.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libStDrvInt.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libdiag.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libdiag.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libdrmfs.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libdrmtime.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libdrmtime.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libgptutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libgptutils.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libicuuc.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libicuuc.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libkeymasterdeviceutils.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libkeymasterprovision.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libkeymasterprovision.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libkeymasterutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libkeymasterutils.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libqdutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libqdutils.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libqisl.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libqservice.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libqservice.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/librecovery_updater_msm.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/librecovery_updater_msm.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/librpmb.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/librpmb.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libsecureui.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libsecureui.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libsecureui_svcsock.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libssd.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libtime_genoff.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/libxml2.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/libxml2.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/hw/android.hardware.boot@1.0-impl.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/hw/android.hardware.boot@1.0-impl.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/hw/bootctrl.sdm660.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/hw/bootctrl.sdm660.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/hw/gatekeeper.sdm660.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/hw/gatekeeper.sdm660.so \
+    $(DEVICE_PATH)/recovery/root/vendor/lib64/hw/keystore.sdm660.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/hw/keystore.sdm660.so \
+    $(DEVICE_PATH)/recovery/root/vendor/compatibility_matrix.xml:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/compatibility_matrix.xml \
+    $(DEVICE_PATH)/recovery/root/vendor/manifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/manifest.xml \
 	$(DEVICE_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
 	$(DEVICE_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
 	$(DEVICE_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
