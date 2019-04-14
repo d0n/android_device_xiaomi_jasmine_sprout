@@ -20,8 +20,6 @@
 # included in a build is to use PRODUCT_PACKAGES in a product
 # definition file).
 #
-TARGET_KERNEL_CONFIG := jasmine-d0nkern_defconfig
-
 include device/xiaomi/sdm660-common/PlatformConfig.mk
 
 # Device Path
@@ -41,7 +39,7 @@ RECOVERY_VARIANT := twrp
 WITH_TWRP := true
 
 # DT2W
-#TARGET_TAP_TO_WAKE_NODE := "/proc/nvt_wake_gesture"
+TARGET_TAP_TO_WAKE_NODE := "/proc/nvt_wake_gesture"
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
@@ -56,11 +54,11 @@ BOARD_VENDOR_PLATFORM := xiaomi-sdm660
 # Root Folders
 BOARD_ROOT_EXTRA_FOLDERS := persist
 
-# Vendor Security patch level
-VENDOR_SECURITY_PATCH := 2019-01-01
-
 # WLAN MAC
 WLAN_MAC_SYMLINK := true
+
+# Vendor Security patch level
+VENDOR_SECURITY_PATCH := 2019-01-01
 
 # Security Patch Hack to prevent Anti Rollback
 PLATFORM_SECURITY_PATCH := 2025-12-31
