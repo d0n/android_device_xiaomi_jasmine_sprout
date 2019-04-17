@@ -52,10 +52,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 BOARD_VENDOR_PLATFORM := xiaomi-sdm660
 
 # Root Folders
-BOARD_ROOT_EXTRA_FOLDERS := persist
-
-# WLAN MAC
-WLAN_MAC_SYMLINK := true
+BOARD_ROOT_EXTRA_FOLDERS := persist bt_firmware dsp firmware persist
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-01-01
