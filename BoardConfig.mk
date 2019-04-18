@@ -49,15 +49,14 @@ BOARD_VENDOR_PLATFORM := xiaomi-sdm660
 # Recovery
 WITH_TWRP := true
 RECOVERY_VARIANT := twrp
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
+TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/etc/recovery.wipe
 
 # Root Folders
 BOARD_ROOT_EXTRA_FOLDERS := persist
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-01-01
-
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
-TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/etc/recovery.wipe
 
 # Security Patch Hack to prevent Anti Rollback
 PLATFORM_SECURITY_PATCH := 2025-12-31
