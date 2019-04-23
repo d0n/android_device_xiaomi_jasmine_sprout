@@ -29,18 +29,7 @@ DEVICE_PATH := device/xiaomi/jasmine_sprout
 # A/B
 AB_OTA_UPDATER := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-<<<<<<< HEAD
-#BOARD_USES_RECOVERY_AS_BOOT := true
 
-# Recovery
-||||||| merged common ancestors
-BOARD_USES_RECOVERY_AS_BOOT := true
-
-# Recovery
-#BOARD_USES_RECOVERY_AS_BOOT := true
-#TARGET_NO_RECOVERY := true
-RECOVERY_VARIANT := twrp
-WITH_TWRP := true
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/nvt_wake_gesture"
@@ -56,58 +45,18 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 BOARD_VENDOR_PLATFORM := xiaomi-sdm660
 TARGET_BOARD_PLATFORM := sdm660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno512
-||||||| merged common ancestors
-RECOVERY_VARIANT := twrp
-WITH_TWRP := true
-
-# DT2W
-TARGET_TAP_TO_WAKE_NODE := "/proc/nvt_wake_gesture"
-
-# Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
-TARGET_KERNEL_CONFIG := jasmine-d0nkern_defconfig
-
-# Manifest
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-
-# Platform
-BOARD_VENDOR_PLATFORM := xiaomi-sdm660
-
-# A/B
-AB_OTA_UPDATER := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_USES_RECOVERY_AS_BOOT := true
-TARGET_NO_RECOVERY := true
-
-# DT2W
-TARGET_TAP_TO_WAKE_NODE := "/proc/nvt_wake_gesture"
-
-# Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
-TARGET_KERNEL_CONFIG := jasmine-d0nkern_defconfig
-
-# Platform
-TARGET_BOARD_PLATFORM := sdm660
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno512
-=======
 
 # DT2W
 #TARGET_TAP_TO_WAKE_NODE := "/proc/nvt_wake_gesture"
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_VARIANT := kryo
->>>>>>> 75421356aaa71337e833071b85ec7340835531db
-
-# Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
-
-# Crypto
 TARGET_HW_DISK_ENCRYPTION := true
-
-# Enable CPUSets
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
@@ -129,7 +78,7 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_HAS_REMOVABLE_STORAGE := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 
-TARGET_USERIMAGES_USE_EXT4 := true
+ARGET_USERIMAGES_USE_EXT4 := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Recovery
@@ -145,12 +94,13 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 BOARD_VENDOR_PLATFORM := xiaomi-sdm660
 
 # Recovery
+RECOVERY_VARIANT := twrp
+WITH_TWRP := true
 TW_THEME := portrait_hdpi
 TW_INCLUDE_CRYPTO := true
 TW_MAX_BRIGHTNESS := 100
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_EXCLUDE_SUPERSU := true
-#TW_EXTRA_LANGUAGES := true
 TW_NO_SCREEN_BLANK := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -163,18 +113,13 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 RECOVERY_VARIANT := twrp
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/etc/recovery.wipe
-
-# Root Folders
+BOARD_SUPPRESS_SECURE_ERASE := true
+TW_IGNORE_MISC_WIPE_DATA := true
+ALLOW_MISSING_DEPENDENCIES := true
 BOARD_ROOT_EXTRA_FOLDERS := persist
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-01-05
-
-BOARD_SUPPRESS_SECURE_ERASE := true
-TW_IGNORE_MISC_WIPE_DATA := true
-ALLOW_MISSING_DEPENDENCIES := true
-
-# Security Patch Hack to prevent Anti Rollback
 PLATFORM_SECURITY_PATCH := 2025-12-31
 
 # WLAN MAC
