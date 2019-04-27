@@ -28,8 +28,7 @@ DEVICE_PATH := device/xiaomi/jasmine_sprout
 
 # A/B
 AB_OTA_UPDATER := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-
+#BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/nvt_wake_gesture"
@@ -61,7 +60,6 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Kernel
-KERNEL_MAKE_FLAGS :=
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
 TARGET_KERNEL_CONFIG := jasmine-d0nkern_defconfig
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
@@ -78,21 +76,10 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_HAS_REMOVABLE_STORAGE := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-
 ARGET_USERIMAGES_USE_EXT4 := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-
-# Recovery
-TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/etc/recovery.wipe
-
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-
-# Manifest
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-
-# Platform
-BOARD_VENDOR_PLATFORM := xiaomi-sdm660
 
 # Recovery
 RECOVERY_VARIANT := twrp
@@ -116,7 +103,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/etc/recovery.wipe
 BOARD_SUPPRESS_SECURE_ERASE := true
 TW_IGNORE_MISC_WIPE_DATA := true
-ALLOW_MISSING_DEPENDENCIES := true
+#ALLOW_MISSING_DEPENDENCIES := true
 BOARD_ROOT_EXTRA_FOLDERS := persist
 
 # Vendor Security patch level
